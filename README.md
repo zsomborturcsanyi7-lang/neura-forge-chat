@@ -1,5 +1,8 @@
 # NEURA Forge Chat — Hungarian AI Chat Application
 
+**Status:** ⚠️ Prototype — chat demo tested on CPU, catastrophic forgetting on small dataset
+
+
 **Version:** 1.0  
 **Author:** Zsombi & Hermes Agent (Nous Research)  
 **Status:** Working prototype
