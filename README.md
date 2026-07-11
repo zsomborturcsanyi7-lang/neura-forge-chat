@@ -1,92 +1,92 @@
-# NEURA Forge Chat — Magyar AI Chat Alkalmazás
+# NEURA Forge Chat — Hungarian AI Chat Application
 
-**Verzió:** 1.0  
-**Szerző:** Zsombi & Hermes Agent (Nous Research)  
-**Státusz:** Működő prototípus
-
----
-
-## Leírás
-
-A **NEURA Forge Chat** egy magyar nyelvű AI chat alkalmazás, amely a **NEURA 300M** modellre épül. Támogat webes (Flask) és parancssori (CLI) felületet, valamint demo módot modell nélküli teszteléshez. A projekt tartalmazza a magyar nyelvű konverzációs adatok generálását és a modell finomhangolását is.
+**Version:** 1.0  
+**Author:** Zsombi & Hermes Agent (Nous Research)  
+**Status:** Working prototype
 
 ---
 
-## Fájlszerkezet
+## Description
+
+**NEURA Forge Chat** is a Hungarian-language AI chat application built on the **NEURA 300M** model. It supports a web-based (Flask) interface, a command-line (CLI) interface, and a demo mode for testing without a model. The project also includes Hungarian conversational data generation and model fine-tuning.
+
+---
+
+## File Structure
 
 ```
 forge_chat/
 │
-├── run.py                      # Fő indító script (web, cli, both módok)
-├── cli.py                      # Parancssori chat felület
-├── __init__.py                 # Csomag inicializálás
-├── requirements.txt            # Python függőségek
+├── run.py                      # Main launcher script (web, cli, both modes)
+├── cli.py                      # Command-line chat interface
+├── __init__.py                 # Package initialization
+├── requirements.txt            # Python dependencies
 │
-├── engine/                     # Chat motor
-│   └── chat_engine.py          # Fő chat motor (üzenet kezelés, válaszgenerálás)
+├── engine/                     # Chat engine
+│   └── chat_engine.py          # Main chat engine (message handling, response generation)
 │
-├── models/                     # Modell réteg
-│   ├── forge_model.py          # NEURA modell wrapper
-│   ├── receiver.py             # Modell betöltő / fogadó
+├── models/                     # Model layer
+│   ├── forge_model.py          # NEURA model wrapper
+│   ├── receiver.py             # Model loader / receiver
 │   └── lm300m_v3_step390000.pt # NEURA 300M checkpoint
 │
-├── data/                       # Adat réteg
-│   └── conversations.db        # Konverzációs adatbázis
+├── data/                       # Data layer
+│   └── conversations.db        # Conversation database
 │
-├── web/                        # Webes felület
-│   ├── app.py                  # Flask alkalmazás
+├── web/                        # Web interface
+│   ├── app.py                  # Flask application
 │   └── templates/
-│       └── chat.html           # Chat HTML felület
+│       └── chat.html           # Chat HTML interface
 │
-└── generate_hungarian_data.py  # Magyar adat generáló (külön fájl)
+└── generate_hungarian_data.py  # Hungarian data generator (separate file)
 ```
 
 ---
 
-## Használat
+## Usage
 
-### Telepítés
+### Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Webes felület indítása
+### Starting the Web Interface
 
 ```bash
-# Alapértelmezett: web mód, 5000-es port, localhost
+# Default: web mode, port 5000, localhost
 python run.py
 
-# Egyedi port és host
+# Custom port and host
 python run.py web --port 8080 --host 0.0.0.0
 
-# Demo mód (modell nélkül)
+# Demo mode (without model)
 python run.py web --demo
 ```
 
-### Parancssori (CLI) mód
+### Command-Line (CLI) Mode
 
 ```bash
 python run.py cli
 ```
 
-### Web + CLI egyidejűleg
+### Web + CLI Simultaneously
 
 ```bash
 python run.py both
 ```
 
-### Egyedi modell betöltése
+### Loading a Custom Model
 
 ```bash
-# Saját checkpoint
-python run.py web --model /eleresi/ut/checkpoint.pt
+# Custom checkpoint
+python run.py web --model /path/to/checkpoint.pt
 
-# Assistant checkpoint használata
+# Use assistant checkpoint
 python run.py web --assistant
 ```
 
-### Magyar adatok generálása
+### Generating Hungarian Data
 
 ```bash
 python generate_hungarian_data.py
@@ -94,30 +94,30 @@ python generate_hungarian_data.py
 
 ---
 
-## Parancssori kapcsolók
+## Command-Line Switches
 
-| Kapcsoló | Leírás | Alapértelmezett |
+| Switch | Description | Default |
 |----------|--------|----------------|
 | `mode` | `web`, `cli`, `both` | `web` |
-| `--port` | Web szerver port | `5000` |
-| `--host` | Web szerver host | `127.0.0.1` |
-| `--debug` | Flask debug mód | Ki |
-| `--demo` | Demo mód (modell nélkül) | Ki |
-| `--model` | Egyedi checkpoint elérési út | — |
-| `--assistant` | Assistant checkpoint | Ki |
+| `--port` | Web server port | `5000` |
+| `--host` | Web server host | `127.0.0.1` |
+| `--debug` | Flask debug mode | Off |
+| `--demo` | Demo mode (no model) | Off |
+| `--model` | Custom checkpoint path | — |
+| `--assistant` | Assistant checkpoint | Off |
 
 ---
 
-## Függőségek
+## Dependencies
 
 - **Python** 3.10+
-- **Flask** ≥ 3.0.0 — web szerver
-- **PyTorch** ≥ 2.0.0 — modell futtatás
+- **Flask** ≥ 3.0.0 — web server
+- **PyTorch** ≥ 2.0.0 — model inference
 - **SentencePiece** ≥ 0.1.99 — tokenizer
 - **NumPy** ≥ 1.24.0
 
 ---
 
-## Fejlesztő
+## Developer
 
-Zsombi & Hermes Agent (Nous Research) (AI asszisztens segítségével)
+Zsombi & Hermes Agent (Nous Research)
