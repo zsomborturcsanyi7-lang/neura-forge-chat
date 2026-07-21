@@ -1,26 +1,23 @@
-# NEURA Forge Chat — Web+CLI chat felület a NEURA 300M magyar LM-hez
+# NEURA Forge Chat — Web+CLI Chat Interface for the NEURA 300M Hungarian LM
 
-**Status:** ⚠️ Prototype — chat demo tesztelve CPU-n, katasztrofális felejtés kis adathalmazon
+**Status:** ⚠️ Prototype — chat demo tested on CPU, catastrophic forgetting on small dataset
 
-Webes (Flask) és CLI chat felület a 355M paraméteres NEURA magyar nyelvmodellhez. Tartalmaz magyar konverzációs adatgenerálást és modell finetuningot.
+Web (Flask) and CLI chat interface for the 355M parameter NEURA Hungarian language model. Includes Hungarian conversation data generation and model fine-tuning.
 
 ## ⚠️ THIS PROJECT IS UNFINISHED — FEEL FREE TO CONTINUE IT ⚠️
 
-**Ez a projekt NINCS KÉSZEN. Bárki folytathatja, aki akarja!**
-Ezt a projektet Zsombi & Hermes Agent (Nous Research) közösen fejlesztette, de egyik projekt sincs 100%-osan befejezve.
+This project was developed by Zsombi & Hermes Agent (Nous Research).
 
 ---
 
-## Struktúra
-
-| Könyvtár/Fájl | Leírás |
-|------|--------|
-| `web/` | Flask web felület |
-| `cli.py` | Parancssori chat |
+## Structure
+| Dir/File | Description |
+|----------|-------------|
+| `web/` | Flask web interface |
+| `cli.py` | Command-line chat |
 | `engine/` | Chat engine |
-| `models/` | Modell fájlok |
-| `data/` | Adatok |
-| `run.py` | Fő belépési pont |
+| `models/` | Model files |
+| `run.py` | Main entry point |
 
-## Fejlesztő
+## Developer
 Zsombi & Hermes Agent (Nous Research)
