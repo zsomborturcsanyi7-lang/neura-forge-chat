@@ -1,19 +1,19 @@
 # neura-forge-chat
 
-Webes és CLI chat felület a Neura magyar nyelvi modellhez.
+Web and CLI chat interface for the Neura Hungarian language model.
 
-## 📌 A projekt célja
-Könnyen használható felület biztosítása a betanított neura modellek futtatásához és teszteléséhez.
+## 📌 Overview & Purpose
+Provides an interactive web UI and CLI interface for querying and testing trained Neura language model checkpoints.
 
-## ⚙️ Technológiai stakk
+## ⚙️ Tech Stack & Architecture
 - Python, FastAPI / Gradio / Streamlit
 
-## 🚀 Telepítés és Használat
+## 🚀 Installation & Quickstart
 ```bash
 git clone https://github.com/zsomborturcsanyi7-lang/neura-forge-chat.git
 cd neura-forge-chat
 python app.py
 ```
 
-## 📊 Status
-⚠️ **Működő felület prototípus**.
+## 📊 Project Status
+⚠️ **Functional Web Interface Prototype**.
