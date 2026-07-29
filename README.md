@@ -1,23 +1,19 @@
 # neura-forge-chat
 
-**Status:** ⚠️ Prototype — chat demo tested on CPU, catastrophic forgetting on small dataset
+Webes és CLI chat felület a Neura magyar nyelvi modellhez.
 
-Web (Flask) and CLI chat interface for the 355M parameter NEURA Hungarian language model. Includes Hungarian conversation data generation and model fine-tuning.
+## 📌 A projekt célja
+Könnyen használható felület biztosítása a betanított neura modellek futtatásához és teszteléséhez.
 
-## ⚠️ THIS PROJECT IS UNFINISHED — FEEL FREE TO CONTINUE IT ⚠️
+## ⚙️ Technológiai stakk
+- Python, FastAPI / Gradio / Streamlit
 
-This project was developed by Zsombi & Hermes Agent (Nous Research).
+## 🚀 Telepítés és Használat
+```bash
+git clone https://github.com/zsomborturcsanyi7-lang/neura-forge-chat.git
+cd neura-forge-chat
+python app.py
+```
 
----
-
-## Structure
-| Dir/File | Description |
-|----------|-------------|
-| `web/` | Flask web interface |
-| `cli.py` | Command-line chat |
-| `engine/` | Chat engine |
-| `models/` | Model files |
-| `run.py` | Main entry point |
-
-## Developer
-Zsombi & Hermes Agent (Nous Research)
+## 📊 Status
+⚠️ **Működő felület prototípus**.
