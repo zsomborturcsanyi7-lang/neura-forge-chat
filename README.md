@@ -1,4 +1,4 @@
-# NEURA Forge Chat — Web+CLI Chat Interface for the NEURA 300M Hungarian LM
+# neura-forge-chat
 
 **Status:** ⚠️ Prototype — chat demo tested on CPU, catastrophic forgetting on small dataset
 
